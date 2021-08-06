@@ -7,7 +7,9 @@ namespace SubstitutionUI
     {
         static void Main(string[] args)
         {
+            // Interface or class can be used interchangeably as below b/c of LSP
             Manager accountingVP = new Manager();
+            IManager accountingVP2 = new Manager();
 
             accountingVP.FirstName = "Bob";
             accountingVP.LastName = "Ross";

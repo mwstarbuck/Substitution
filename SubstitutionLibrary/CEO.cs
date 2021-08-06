@@ -4,18 +4,13 @@ using System.Text;
 
 namespace SubstitutionLibrary
 {
-    public class CEO :  Employee
+    public class CEO :  BaseEmployee, IManager
     {
         public override void CalculaterPerHourRate(int rank)
         {
             decimal baseAmount = 150M;
 
             Salary = baseAmount + rank;
-        }
-
-        public virtual void AssignManager(Employee manager)
-        {
-            throw new InvalidOperationException("The CEO has no manager.");
         }
 
         public void GeneratePerformanceReview()
